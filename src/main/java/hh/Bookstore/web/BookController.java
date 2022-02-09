@@ -10,7 +10,7 @@ public class BookController {
 	// http://localhost:8080/index
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String indexing() {
-		return "";
+		return "index";
 	}
 
 }
