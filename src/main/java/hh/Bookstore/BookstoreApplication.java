@@ -2,13 +2,8 @@ package hh.Bookstore;
 
 import hh.Bookstore.domain.Book;
 import hh.Bookstore.domain.BookRepository;
-
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 
@@ -18,8 +13,6 @@ public class BookstoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BookstoreApplication.class, args);
 	}
-	
-	
 	
 	@Bean
 	public CommandLineRunner bookDemo(BookRepository bookRepository) { 
@@ -34,8 +27,6 @@ public class BookstoreApplication {
 			for (Book book : bookRepository.findAll()) {
 				System.out.println(book.toString());
 			}
-
 		};
 	}
-	
 }
